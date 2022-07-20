@@ -11,8 +11,8 @@ The mel-spectrograms are available at
 ## Training
 
 The project file tree should be structured as follows:
-'
-📦MIR
+'''bash
+📦HouseX
  ┣ 📜infer.py
  ┣ 📜logger.py
  ┣ 📜plot.py
@@ -23,7 +23,7 @@ The project file tree should be structured as follows:
  ┃ ┣ 📂test
  ┃ ┣ 📂train
  ┃ ┣ 📂val
-'
+'''
 
 Since the computing tasks are done on the NYU HPC cluster, we need to manually load the state dictionary of the pretrained torchvision models. If you want to replicate the experiments, simply delete the line that load state dictionary in `train.py` and set `pretrained = True`. For example, if you want to use pretrained ResNet18, set `backbone = models.resnet18(pretrained=True)`.
 
