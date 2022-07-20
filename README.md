@@ -24,7 +24,7 @@ Then, run
 
 to install the required packages.
 
-For PyTorch, you can install the version that matches your system following [the official installation guide](https://pytorch.org/get-started/locally/).
+For PyTorch and Torchvision, you can install the version that matches your system following [the official installation guide](https://pytorch.org/get-started/locally/).
 
 
 ## Training
