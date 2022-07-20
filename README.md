@@ -67,6 +67,6 @@ where `AUDIO_PATH` should be the file name **without suffix**. For example, if w
 
 ## License
 
-This dataset are for research purpose **ONLY**. It is strictly forbidden to use them for ANY commercial use. You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data. Please contact us through xl3133@nyu.edu if you find you copyright violated by the use of this dataset.
+This dataset is for research purpose **ONLY**. It is strictly forbidden to use it for ANY commercial use. You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data. Please contact us through xl3133@nyu.edu if you find you copyright violated by the use of this dataset.
 
 
