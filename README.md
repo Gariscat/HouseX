@@ -11,9 +11,12 @@ The mel-spectrograms are available at
 ## Environment Setup
 We recommend using conda virtual environment. First, run
 
-`conda create -n HouseX python=3.8`
+```
+conda create -n HouseX python=3.8
+conda activate HouseX
+```
 
-to create an environment.
+to create and activate the environment.
 
 Then, run
 
