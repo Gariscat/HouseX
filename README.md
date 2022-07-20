@@ -61,7 +61,7 @@ where `TASK_ID` could be ranged in `[0, 1, 2, 3, 4, 5]` corresponding to differe
 
 ## Inference
 
-The format of the input audio file is set to `.flac` as default. To do inference on a audio file, run:
+The model used in the inference stage is set to **ResNet18** as default. To do inference on a audio file, run:
 
 `python infer.py --track_name {AUDIO_PATH} --do_train --pretrained`
 
