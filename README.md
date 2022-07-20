@@ -40,11 +40,11 @@ The format of the input audio file is set to `.ogg` as default. To do inference 
 
 `python infer.py --track_name {AUDIO_PATH}`
 
-where `AUDIO PATH` should be the file name without suffix. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then run `python infer.py --track_name "CA7AX Set #3"`
+where `AUDIO_PATH` should be the file name **without suffix**. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then run `python infer.py --track_name "CA7AX Set #3"`
 
 
 ## License
 
-This dataset are for research purpose ONLY. It is strictly forbidden to use them for ANY commercial use. You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data. Please contact us through xl3133@nyu.edu if you find you copyright violated by the use of this dataset.
+This dataset are for research purpose **ONLY**. It is strictly forbidden to use them for ANY commercial use. You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data. Please contact us through xl3133@nyu.edu if you find you copyright violated by the use of this dataset.
 
 
