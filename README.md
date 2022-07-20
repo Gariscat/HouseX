@@ -8,6 +8,20 @@ The mel-spectrograms are available at
 [HouseX processed data (Google Drive link)](https://drive.google.com/drive/u/1/folders/1HHi_WadYdea791zOq0Ib07AAPsR__yH-)
 
 
+## Environment Setup
+We recommend using conda virtual environment. First, run
+
+`conda create -n HouseX python=3.8`
+
+to create an environment.
+
+Then, run
+
+`pip install -r requirements.txt`
+
+to install the required packages.
+
+
 ## Training
 
 The project file tree should be structured as follows:
