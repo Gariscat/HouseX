@@ -65,7 +65,7 @@ The format of the input audio file is set to `.flac` as default. To do inference
 
 `python infer.py --track_name {AUDIO_PATH} --do_train --pretrained`
 
-where `AUDIO_PATH` should be the file name **without suffix**. For example, if we want to use one of our mixtape `CA7AX Set #3.flac`, then place the file under the root directory of this project and run `python infer.py --track_name "CA7AX Set #3"`.
+where `AUDIO_PATH` should be the file name. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then place the file under the root directory of this project and run `python infer.py --track_name "CA7AX Set #3.ogg"`.
 
 
 ## License
