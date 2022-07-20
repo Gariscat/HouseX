@@ -30,7 +30,8 @@ def inference(track_name, delta=WIN_LEN, window_length=WIN_LEN):
     print('Sample rate: {}'.format(sr))
     spec_dir = './melspecgrams/'
     save_dir = track_name[:track_name.index('.')] + '.npy'
-    ret = []
+    sample_labels = []
+    window_labels = []
     delta_frame_cnt, window_frame_cnt = int(delta * sr), int(window_length * sr)
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     model = torch.load('./param/finetuned_ResNet.pth').to(device)
@@ -43,11 +44,6 @@ def inference(track_name, delta=WIN_LEN, window_length=WIN_LEN):
             clip_sound = np.concatenate((clip_sound, np.zeros(window_frame_cnt-clip_sound.shape[0])))
 
         plt.axis('off')
-        '''
-        clip_sound = torch.from_numpy(clip_sound).float().cuda()
-        mel_spec = mel_converter(clip_sound)[0].cpu().numpy()
-        clip_sound = clip_sound.cpu()
-        '''
         mel_spec = librosa.feature.melspectrogram(y=clip_sound, sr=sr)
         display.specshow(librosa.power_to_db(mel_spec, ref=np.max))
         plt.savefig(spec_dir + 'real_time.jpg', bbox_inches='tight')
@@ -63,23 +59,25 @@ def inference(track_name, delta=WIN_LEN, window_length=WIN_LEN):
         # print(probs)
         pred = probs.argmax().item()
         # print(pred)
-        ret += [pred for _ in range(temp)]
-        # print('[{}, {}) among {}'.format(st, ed, sound.shape[0]), clip_sound.shape[0], len(ret))
-        assert len(ret) == ed
+        sample_labels += [pred for _ in range(temp)]
+        window_labels += [pred]
+        # print('[{}, {}) among {}'.format(st, ed, sound.shape[0]), clip_sound.shape[0], len(sample_labels))
+        assert len(sample_labels) == ed
 
-    # mel_converter = mel_converter.cpu()
-    # torch.cuda.empty_cache()
-    """"""
     with open(save_dir, 'wb') as f:
-        np.save(f, np.array(ret))
-
+        np.save(f, np.array(sample_labels))
+    """
     with open(save_dir, 'rb') as f:
         a = np.load(f)
-
+    """
     print('inference done')
+    plt.figure(figsize=(12, 8))
     plt.clf()
-    plt.plot(a)
+    plt.xlabel('window index')
+    plt.yticks([0, 1, 2, 3], song_types)
+    plt.plot(window_labels, lw=0.5)
     plt.title('predicted sub-genre (unsmoothed)')
+
     plt.show()
     plt.close()
 
@@ -106,8 +104,8 @@ def inference(track_name, delta=WIN_LEN, window_length=WIN_LEN):
         np.save(f, tmp)
     """
 
-
-def play_and_inference(track_name, delta=7.5, window_length=7.5):
+"""
+def play_and_inference(track_name, delta=1.875, window_length=1.875):
     import pygame
     sound, sr = librosa.load(track_name)
     spec_dir = './melspecgrams/'
@@ -132,7 +130,7 @@ def play_and_inference(track_name, delta=7.5, window_length=7.5):
             clip_sound = sound[st:ed]
 
             plt.axis('off')
-            mel_spec = librosa.feature.melspectrogram(y=clip_sound, sr=sr, n_fft=N_FFT)
+            mel_spec = librosa.feature.melspectrogram(y=clip_sound, sr=sr)
             display.specshow(librosa.power_to_db(mel_spec, ref=np.max))
             plt.savefig(spec_dir + 'real_time.jpg', bbox_inches='tight')
 
@@ -148,6 +146,7 @@ def play_and_inference(track_name, delta=7.5, window_length=7.5):
 
     pygame.mixer.music.stop()
     pygame.mixer.quit()
+"""
 
 
 if __name__ == '__main__':
