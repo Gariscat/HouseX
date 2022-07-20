@@ -7,6 +7,5 @@ HouseX is a fine-grained house music dataset, including 160 tracks, that provide
 
 This dataset are for research purpose ONLY. It is strictly forbidden to use them for ANY commercial use. You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data. Please contact us through xl3133@nyu.edu if you find you copyright violated by the use of this dataset.
 
-## Finetuning
-
-Since the computing tasks are done on the NYU HPC cluster, we need to manually load the state dictionary of the pretrained torchvision models. If you want to replicate the experiments, simply delete the line that load state dictionary in train.py and set pretrained = True. For example, if you want to use pretrained ResNet18, set backbone = models.resnet18(pretrained=True).
+## Training
+Since the computing tasks are done on the NYU HPC cluster, we need to manually load the state dictionary of the pretrained torchvision models. If you want to replicate the experiments, simply delete the line that load state dictionary in `train.py` and set `pretrained = True`. For example, if you want to use pretrained ResNet18, set `backbone = models.resnet18(pretrained=True)`.
