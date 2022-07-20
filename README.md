@@ -27,7 +27,7 @@ The project file tree should be structured as follows:
 The `./melspecgrams` directory could be derived either from `melspecgrams_all.zip` or `melspecgrams_drop.zip` provided in the Google Drive link.
 Since the computing tasks are done on the NYU HPC cluster, we need to manually load the state dictionary of the pretrained torchvision models. If you want to replicate the experiments, simply delete the line that load state dictionary in `train.py` and set `pretrained = True`. For example, if you want to use pretrained ResNet18, set `backbone = models.resnet18(pretrained=True)`.
 To train a model, run the following command:
-`python train.py --id ${SLURM_ARRAY_TASK_ID}`
+`python train.py --id ${TASK_ID}`
 
 
 ## License
