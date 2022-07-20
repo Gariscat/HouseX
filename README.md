@@ -7,7 +7,23 @@ HouseX is a fine-grained house music dataset, including 160 tracks, that provide
 The mel-spectrograms are available at 
 [HouseX processed data (Google Drive Link)](https://drive.google.com/drive/u/1/folders/1HHi_WadYdea791zOq0Ib07AAPsR__yH-)
 
+
 ## Training
+
+The project file tree should be structured as follows:
+📦MIR
+ ┣ 📜infer.py
+ ┣ 📜logger.py
+ ┣ 📜plot.py
+ ┗ 📜train.py
+ ┣ 📂logs
+ ┣ 📂param
+ ┣ 📂melspecgrams
+ ┃ ┣ 📂test
+ ┃ ┣ 📂train
+ ┃ ┣ 📂val
+
+
 Since the computing tasks are done on the NYU HPC cluster, we need to manually load the state dictionary of the pretrained torchvision models. If you want to replicate the experiments, simply delete the line that load state dictionary in `train.py` and set `pretrained = True`. For example, if you want to use pretrained ResNet18, set `backbone = models.resnet18(pretrained=True)`.
 
 
