@@ -26,8 +26,11 @@ to install the required packages.
 
 For PyTorch and Torchvision, you can install the version that matches your system following [the official installation guide](https://pytorch.org/get-started/locally/). We used a previous version for convenience:
 
-`pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
-`
+`pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html`
+
+You may also need to install `ffmpeg` using the following command:
+
+`conda install ffmpeg -c conda-forge`
 
 
 ## Training
