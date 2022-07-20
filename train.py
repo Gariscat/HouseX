@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 import torchvision
 from torchvision import transforms, models
 from torch.utils.tensorboard import SummaryWriter
-from torchensemble import FusionClassifier, BaggingClassifier
 import torch
 from torch import nn, optim
 from torch.utils.data import Dataset, DataLoader
@@ -221,18 +220,6 @@ if __name__ == '__main__':
             dropout = 0.1,
             emb_dropout = 0.1
         )
-    elif args.id == 6:  # unfinished......
-        base_estimator = models.resnet18(pretrained=False)
-        if args.pretrained:
-            base_estimator.load_state_dict(torch.load('/gpfsnyu/home/xl3133/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth'))
-        model = BaggingClassifier(
-            estimator=nn.Sequential(
-                base_estimator,
-                nn.Dropout(p=args.dropout),
-                nn.Linear(1000, len(song_types))
-                ),
-            n_estimators=10,
-        )    
     else:
         raise KeyError('Current backbone not supported...')
     print('backbone pretrained:', args.pretrained)
