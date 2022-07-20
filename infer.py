@@ -13,11 +13,10 @@ from tqdm import tqdm, trange
 import matplotlib.pyplot as plt
 from nnAudio.features.mel import MelSpectrogram
 
-os.chdir('D:/Project 2022/MIR')
 BPM = 126
 N_FFT = 256
 SR = 22050
-WIN_LEN = 60*4*4/BPM
+WIN_LEN = 60*4/BPM
 song_types = ['cool', 'dark', 'emotional', 'happy']
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
