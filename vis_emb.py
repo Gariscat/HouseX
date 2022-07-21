@@ -49,5 +49,3 @@ def extract_latent(loader, mode, model=backbone):
 
 
 extract_latent(train_loader, 'train')
-extract_latent(val_loader, 'val')
-extract_latent(test_loader, 'test')
