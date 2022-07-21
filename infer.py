@@ -35,6 +35,7 @@ def inference(track_name, delta=WIN_LEN, window_length=WIN_LEN):
     delta_frame_cnt, window_frame_cnt = int(delta * sr), int(window_length * sr)
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     model = torch.load('./param/finetuned_ResNet.pth').to(device)
+    model.eval()
 
     for st in tqdm(range(0, sound.shape[0], delta_frame_cnt), desc=f'inference on track {track_name}'):
         ed = np.minimum(st+window_frame_cnt, sound.shape[0])
