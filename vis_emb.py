@@ -2,7 +2,7 @@ import csv
 import torch
 from torch import nn
 from torchvision import models
-from train import train_loader, val_loader, test_loader
+from train import train_loader
 from tqdm import tqdm
 import numpy as np
 from tensorboard import summary
