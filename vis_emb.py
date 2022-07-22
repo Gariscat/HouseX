@@ -12,7 +12,7 @@ import seaborn as sns
 sns.set()
 
 song_types = ['future house', 'bass house', 'progressive house', 'melodic house']
-colors = ['red', 'orange', 'blue', 'purple']
+colors = ['darkred', 'darkorange', 'darkblue', 'darkgreen']
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ft_model = torch.load('./param/finetuned_ResNet.pth').to(device)
 
