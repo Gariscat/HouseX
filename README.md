@@ -73,3 +73,6 @@ where `AUDIO_PATH` should be the file name. For example, if we want to use one o
 This dataset is for research purpose **ONLY**. It is strictly forbidden to use it for ANY commercial use. You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data. Please contact us through xl3133@nyu.edu if you find you copyright violated by the use of this dataset.
 
 
+## Acknowledgement
+
+We thank members from New York University who have filled the questionnaire of the correspondence between colors and the music sub-genres, for our choices of colors in our demo. Besides, the Blender environment used in the demo is inspired by the work of Ducky 3D\cite{blender_base_env}. Also, we thank Wang et al. for assistance on the use of the high performance computing cluster (NYU HPC), and Xia et al. for some valuable advice on our pipeline.
