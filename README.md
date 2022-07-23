@@ -1,6 +1,6 @@
 # HouseX
 
-HouseX is a fine-grained house music dataset, including 160 tracks, that provides 4 sub-genre labels and around 17480 converted mel-spectrograms of slices of these tracks. Besides, this repository includes several baseline models for classification on these mel-spectrograms. Additionally, the start and the end of the drop of each track is annotated, as provided by the json files. The four `.xlsx` files contain metadata of the songs we selected, including the key, the alternate key and the BPM.
+HouseX is a fine-grained house music dataset, including 160 tracks, that provides 4 sub-genre labels and around 17480 converted mel-spectrograms of slices of these tracks. Besides, this repository includes several baseline models for classification on these mel-spectrograms. Additionally, the start and the end of the drop of each track is annotated, as provided by the `.json` files. The four `.xlsx` files contain metadata of the songs we selected, including the key, the alternate key and the BPM.
 
 ## Dataset
 The mel-spectrograms are available at 
