@@ -64,7 +64,7 @@ The model used in the inference stage is set to **ResNet18** as default. To do i
 
 `python infer.py --track_name {AUDIO_PATH} --do_train --pretrained`
 
-where `AUDIO_PATH` should be the file name. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then place the file under the root directory of this project and run `python infer.py --track_name "CA7AX Set #3.ogg"`.
+where `AUDIO_PATH` should be the file name. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then place the file under the root directory of this project and run `python infer.py --track_name "CA7AX Set #3.ogg"`. The output would be a numpy array, saved as `CA7AX Set #3.npy` that indicates the sub-genre predictions of the entire track.
 
 
 ## License
