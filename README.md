@@ -66,6 +66,7 @@ The model used in the inference stage is set to **ResNet18** as default. To do i
 
 where `AUDIO_PATH` should be the file name. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then place the file under the root directory of this project and run `python infer.py --track_name "CA7AX Set #3.ogg"`. The output would be a numpy array whose length is the number of samples of the track, saved as `CA7AX Set #3.npy`, that indicates the sub-genre predictions of the entire track.
 
+We used Blender 3.0 to create a demo of the inference results, stored in the same google drive link provided above. If you are interested in our demo project, please contact xl3133@nyu.edu for the `.blend` file.
 
 ## License
 
