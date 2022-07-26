@@ -53,7 +53,7 @@ Since the computing tasks are done on the NYU HPC cluster, we need to manually l
 
 To train a model, run the following command:
 
-`python train.py --id {TASK_ID}`
+`python train.py --id {TASK_ID} --do_train --pretrained`
 
 where `TASK_ID` could be ranged in `[0, 1, 2, 3, 4, 5]` corresponding to different network architectures as shown in `train.py`.
 
@@ -62,7 +62,7 @@ where `TASK_ID` could be ranged in `[0, 1, 2, 3, 4, 5]` corresponding to differe
 
 The model used in the inference stage is set to **ResNet18** as default. To do inference on a audio file, run:
 
-`python infer.py --track_name {AUDIO_PATH} --do_train --pretrained`
+`python infer.py --track_name {AUDIO_PATH}`
 
 where `AUDIO_PATH` should be the file name. For example, if we want to use one of our mixtape `CA7AX Set #3.ogg`, then place the file under the root directory of this project and run `python infer.py --track_name "CA7AX Set #3.ogg"`. The output would be a numpy array whose length is the number of samples of the track, saved as `CA7AX Set #3.npy`, that indicates the sub-genre predictions of the entire track.
 
