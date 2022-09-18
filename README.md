@@ -68,7 +68,7 @@ where `AUDIO_PATH` should be the file name. For example, if we want to use one o
 
 
 ## Demo
-
+The survey results are presented at this [link](https://www.wjx.cn/wxloj/datafullscreen.aspx?activity=173412412).
 We used Blender 3.0 to create a demo of the inference results, stored in the same google drive link provided above. If you are interested in our demo project, please contact xl3133@nyu.edu for the `.blend` file. The demos are available at [demos of the CA7AX visualizer (v1.0)](https://drive.google.com/drive/u/0/folders/1Vmo9jMYbo0p1agjDoga7Onj1i4WbI4Wk).
 
 ## License
