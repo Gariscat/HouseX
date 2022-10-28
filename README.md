@@ -4,7 +4,9 @@ HouseX is a fine-grained house music dataset, including 160 tracks, that provide
 
 ## Dataset
 The original paper introducing this dataset can be accessed on [Arxiv](https://arxiv.org/abs/2207.11690). The mel-spectrograms are available at 
-[HouseX processed data (Google Drive link)](https://drive.google.com/drive/u/1/folders/1HHi_WadYdea791zOq0Ib07AAPsR__yH-)
+[HouseX processed data (Google Drive link)](https://drive.google.com/drive/u/1/folders/1HHi_WadYdea791zOq0Ib07AAPsR__yH-).
+
+P.S. The paper has been accepted by [APSIPA ASC 2022](https://www.apsipa2022.org/).
 
 
 ## Environment Setup
